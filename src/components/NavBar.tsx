@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import SearchBar from "./SearchBar";
+import Profile from "./Profile";
 
 const NavBar = () => {
   return (
@@ -21,6 +22,7 @@ const NavBar = () => {
       </div>
       <p className=" text-base font-normal  text-gray-500">About 4337</p>
       <SearchBar />
+      <Profile />
     </div>
   );
 };
