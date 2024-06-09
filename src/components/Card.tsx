@@ -8,6 +8,7 @@ type prop = {
   dateOfEvent?: Date;
   bountyPrice?: number;
   position?: string;
+  participants?: number;
 };
 
 const Card = ({
@@ -15,11 +16,12 @@ const Card = ({
   companyName,
   title,
   bountyPrice,
+  participants,
   position,
   dateOfEvent,
 }: prop) => {
   return (
-    <div className="flex w-[67.5rem] h-[7.2rem] p-4 rounded-lg  hover:bg-slate-200">
+    <div className="flex w-[67.5rem] h-[7.2rem] p-4 rounded-lg  hover:bg-slate-200 transition duration-500">
       <Image src={path} width={80} height={80} alt={companyName} />
       <div className="flex w-full p-6 justify-between items-center">
         <div>

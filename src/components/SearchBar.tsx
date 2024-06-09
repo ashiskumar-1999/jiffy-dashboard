@@ -22,7 +22,7 @@ const SearchBar = () => {
       <span className="h-6 border-l border-gray-300 m-3" />
       <input
         placeholder="Search an UserOp"
-        className="active:border-transparent"
+        className="focus:outline-none"
         value={inputValue}
         /* onPaste={handlePaste} */
         onChange={handleChange}

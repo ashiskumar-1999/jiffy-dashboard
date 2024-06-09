@@ -29,7 +29,7 @@ const Profile = () => {
       </button>
       {/* Need position fixing*/}
       {isOpen && (
-        <div className="flex flex-col items-start gap-3 px-4 py-2.5 border rounded-lg">
+        <div className="flex flex-col items-start gap-3 w-52 px-4 py-2.5 bg-white absolute z-index-1 border rounded-lg">
           <div className="flex items-center gap-3">
             <Image src="/user.svg" width={16} height={16} alt="user" />
             <p className="text-sm font-medium text-slate-500">View Profile</p>
@@ -42,7 +42,8 @@ const Profile = () => {
             <Image src="/code.svg" width={16} height={16} alt="user" />
             <p className="text-sm font-medium text-slate-500">API</p>
           </div>
-          {/*  <div className="border-t-2 border-gray-300" /> */}
+
+          <span className="w-full border-t border-gray-300" />
           <div className="flex items-center gap-3">
             <Image src="/log-out.svg" width={16} height={16} alt="user" />
             <p className="text-sm font-medium text-slate-500">Log out</p>
