@@ -1,8 +1,10 @@
 import React, { useState, useCallback, useMemo } from "react";
+import Image from "next/image";
 import { Inter } from "next/font/google";
-import Card from "../components/Card";
+import Card from "@/components/Card";
 import { Tab, TabPanel } from "@/components/Tab";
 import NavBar from "@/components/NavBar";
+import Filter from "@/components/Filter";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -56,14 +58,20 @@ export default function Home() {
     <>
       <NavBar />
       <div className="flex flex-col px-[11.25rem]">
-        <div className="flex items-center">
+        <div className="flex justify-between items-center">
           <div className="flex items-center">
             <p className="text-xl font-semibold">Work History</p>
             <span className="h-8 border-l border-gray-300 m-3" />
             {memoizedTab}
           </div>
+          <div className="flex items-center gap-4">
+            <span className="h-8 border-l border-gray-300 m-3" />
+            <Image src="/filter.svg" width={16} height={16} alt="filter" />
+            <p className="text-sm font-normal text-gray-400">Filter By</p>
+            <Filter />
+          </div>
         </div>
-        <div className="border-t-2 border-gray-300 mb-4" />
+        <div className="border-t-2 border-gray-300 pb-4 -mt-2" />
         <TabPanel>
           {completedBountyData.map((data) => (
             <Card
