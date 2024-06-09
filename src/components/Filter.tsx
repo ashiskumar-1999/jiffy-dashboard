@@ -8,7 +8,7 @@ const Filter = ({ label, currentOption }: filterProps) => {
   return (
     <select
       id="filter"
-      className="block w-[9.5rem] h-[2.12rem] p-2 bg-white text-sm font-medium text-indigo-500 bg-white border rounded "
+      className="w-[9.5rem] h-[2.12rem] text-sm font-medium text-indigo-500 border rounded "
     >
       <option>All</option>
       <option value={currentOption}>Front-end</option>
