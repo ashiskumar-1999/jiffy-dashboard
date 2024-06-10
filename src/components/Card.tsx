@@ -21,7 +21,7 @@ const Card = ({
   dateOfEvent,
 }: prop) => {
   return (
-    <div className="flex w-[67.5rem] h-[7.2rem] p-4 rounded-lg  hover:bg-slate-200 transition duration-500">
+    <div className="flex w-[67.5rem] h-[7.2rem] p-4 rounded-lg  hover:bg-[#EDF2F7] transition ease-in duration-300">
       <Image src={path} width={80} height={80} alt={companyName} />
       <div className="flex w-full p-6 justify-between items-center">
         <div>
@@ -46,7 +46,7 @@ const Card = ({
         </div>
         <div>
           <p className="text-gray-500">04/04/2022</p>
-          <p className="text-gray-500">32 participants</p>
+          <p className="text-gray-500">{participants} participants</p>
         </div>
       </div>
     </div>

@@ -6,8 +6,6 @@ import { Tab, TabPanel } from "@/components/Tab";
 import NavBar from "@/components/NavBar";
 import Filter from "@/components/Filter";
 
-const inter = Inter({ subsets: ["latin"] });
-
 const completedBountyData = [
   {
     id: "1",
@@ -16,12 +14,32 @@ const completedBountyData = [
     title: "Create a Frame for Farcaster",
     bountyPrice: 500,
     position: "1st",
+    partcipants: 20,
   },
   {
     id: "2",
     path: "/deanslistdao.svg",
     companyName: "Dean's List DAO",
     title: "Armada UI/UX Review",
+    partcipants: 7,
+  },
+  {
+    id: "3",
+    path: "/superteam.svg",
+    companyName: "Superteam",
+    title: "Design Earn's talent Leaderboard",
+    bountyPrice: 700,
+    position: "1st",
+    partcipants: 36,
+  },
+  {
+    id: "4",
+    path: "/pstakefinance.svg",
+    companyName: "pSTAKE Finance",
+    title: "Write a thread with memes for PP Program on Solana",
+    bountyPrice: 100,
+    position: "3st",
+    partcipants: 12,
   },
 ];
 
@@ -31,6 +49,7 @@ const inReviewBountyData = [
     path: "/deanslistdao.svg",
     companyName: "Dean's List DAO",
     title: "Armada UI/UX Review",
+    partcipants: 64,
   },
   {
     id: "2",
@@ -39,6 +58,7 @@ const inReviewBountyData = [
     title: "Create a Frame for Farcaster",
     bountyPrice: 500,
     position: "1st",
+    partcipants: 23,
   },
 ];
 
@@ -81,10 +101,9 @@ export default function Home() {
               title={data.title}
               bountyPrice={data.bountyPrice}
               position={data.position}
+              participants={data.partcipants}
             />
           ))}
-        </TabPanel>
-        <TabPanel>
           {inReviewBountyData.map((data) => (
             <Card
               key={data.id}
@@ -93,6 +112,7 @@ export default function Home() {
               title={data.title}
               bountyPrice={data.bountyPrice}
               position={data.position}
+              participants={data.partcipants}
             />
           ))}
         </TabPanel>
